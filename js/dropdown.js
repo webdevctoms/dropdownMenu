@@ -66,6 +66,7 @@ Dropdown.prototype.windowResized = function(event){
 Dropdown.prototype.adjustHeight = function(height,index){
 	let newHeight = parseInt(this.buttonSiblings[index].style.height.replace("px","")) + height;
 	this.buttonSiblings[index].style.height = newHeight + "px";
+	this.siblingHeights[index] = newHeight;
 	console.log("adjust height", newHeight,height);
 }
 
