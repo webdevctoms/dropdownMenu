@@ -87,11 +87,23 @@
 
 .rowContent{
 	border-bottom: 1px solid grey;
+	margin-top: 5px;
 }
 
 .rowContent > p{
 	display: inline-block;
-	width:45%;
+	width:100%;
+	margin-bottom: 5px;
+}
+
+@media (min-width: 550px){
+	.rowContent > p{
+		width:45%;
+	}
+
+	.rowContent{
+		text-align: center;
+	}
 }
 
 @media (min-width: 800px){
@@ -101,5 +113,11 @@
 		-moz-transition: 500ms;
 		-o-transition: 500ms;
 		/*height: 0px;*/
+	}
+}
+
+@media (min-width: 1130px){
+	.rowContent > p{
+		width:23%;
 	}
 }
