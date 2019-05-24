@@ -1,5 +1,9 @@
-function Dropdown(buttonClass,siblingClass){
+function Dropdown(buttonClass,siblingClass,parentInstance){
 	//the parent buttons represent the parent button and sub menu buttons
+	this.parentInstance;
+	if(parentInstance){
+		this.parentInstance = parentInstance;
+	}
 	this.parentButtons = document.getElementsByClassName(buttonClass);
 	this.buttonSiblings = document.getElementsByClassName(siblingClass);
 	this.siblingHeights = this.getHeights();
@@ -59,26 +63,48 @@ Dropdown.prototype.windowResized = function(event){
 	
 };
 
+Dropdown.prototype.adjustHeight = function(height,index){
+	let newHeight = parseInt(this.buttonSiblings[index].style.height.replace("px","")) + height;
+	this.buttonSiblings[index].style.height = newHeight + "px";
+	console.log("adjust height", newHeight,height);
+}
+
 Dropdown.prototype.buttonClicked = function(event){
 	//event.stopPropagation();
 	event.preventDefault();
 	var optionContent = event.currentTarget.nextElementSibling;
-	console.log("button ", optionContent);
+	//capture the parent index
+	var parentIndex;
+	if(this.parentInstance){
+		console.log("button ", event.currentTarget.parentElement.parentElement.previousElementSibling);
+		parentIndex = event.currentTarget.parentElement.parentElement.previousElementSibling.dataset.bundleid;
+	}
+	var bundleId = event.currentTarget.dataset.bundleid;
 	var arrowIcon = event.currentTarget.children[1];
 
 	if(optionContent.style.height === "0px"){
 		arrowIcon.style.transform = "rotate(180deg)";
-		var bundleId = event.currentTarget.dataset.bundleid;
+		
 		console.log(this.siblingHeights, bundleId);
 		optionContent.style.height = this.siblingHeights[bundleId] + "px";
+		//only child will fire this
+		if(this.parentInstance){
+			this.parentInstance.adjustHeight(this.siblingHeights[bundleId],parentIndex);
+		}
 		//optionContent.style.borderBottom = "1px solid #ddd";
 	}
 	else{
 		arrowIcon.style.transform = "rotate(0deg)";
 		optionContent.style.height = "0px";
+		if(this.parentInstance){
+			let subtractHeight = this.siblingHeights[bundleId] * (-1);
+			this.parentInstance.adjustHeight(subtractHeight,parentIndex);
+		}
+		/*
 		setTimeout(function(){
 			optionContent.style.borderBottom = "none";
 		},450);
+		*/
 	}	
 	
 };

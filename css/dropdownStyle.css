@@ -58,31 +58,11 @@
 	overflow: hidden;
 	margin-bottom: 10px;
 }
-/*
-.tableContainer{
-	transition: height 1s;
-	-webkit-transition: 1s;
-	-moz-transition: 1s;
-	-o-transition: 1s;
-	margin-top: 5px;
-	overflow: hidden;
-}
 
-.tableContainer > table {
-	width: 100%;
-}
-
-.tableContainer > table > tbody > tr{
-	border-bottom: 1px solid black;
-}
-
-.tableContainer > table > tbody >tr > td{
-	text-align: center;
-}
-*/
 .rowContainer{
 	margin-top: 5px;
 	margin-bottom: 0px;
+	height: 0px;
 }
 
 .rowContent{
