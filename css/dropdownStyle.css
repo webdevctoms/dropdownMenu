@@ -1,0 +1,105 @@
+.bundle-container{
+	position: relative;
+	width: 50%;
+	margin: auto;
+}
+
+.bundle-button{
+	padding-bottom: 5px;
+	border-bottom: 1px solid #0c0c0d;
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+
+.bundle-button:hover{
+	color: inherit;
+	text-decoration: none;
+}
+
+.bundle-button:focus{
+	color: inherit;
+	text-decoration: none;
+}
+
+.bundle-button p{
+	display: inline;
+}
+
+.bundle-button:hover{
+	cursor: pointer;
+}
+
+.arrowIcon{
+	display: inline-block;
+	width: 15px;
+	height: 18px;
+	transform: rotate(0deg);
+	transition: 500ms;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	-o-transition: 500ms;
+	position: absolute;
+	right: 0px;
+}
+
+.subMenu-button{
+	margin: initial;
+	margin-left: 20px;
+	margin-top: 10px;
+	width:90%;
+}
+
+.subButtonContainer,.rowContainer{
+	transition: height 1s;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-o-transition: 1s;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+/*
+.tableContainer{
+	transition: height 1s;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-o-transition: 1s;
+	margin-top: 5px;
+	overflow: hidden;
+}
+
+.tableContainer > table {
+	width: 100%;
+}
+
+.tableContainer > table > tbody > tr{
+	border-bottom: 1px solid black;
+}
+
+.tableContainer > table > tbody >tr > td{
+	text-align: center;
+}
+*/
+.rowContainer{
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
+.rowContent{
+	border-bottom: 1px solid grey;
+}
+
+.rowContent > p{
+	display: inline-block;
+	width:45%;
+}
+
+@media (min-width: 800px){
+	.subButtonContainer{
+		transition: height 500ms;
+		-webkit-transition: 500ms;
+		-moz-transition: 500ms;
+		-o-transition: 500ms;
+		/*height: 0px;*/
+	}
+}

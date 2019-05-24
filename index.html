@@ -1,11 +1,143 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Dropdown menu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8"/>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/dropDownStyle.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class="dropdownMenu">
+	<div class="bundle-container">
+		<a href="#" class="bundle-button jsParentButton" id="bundle-button0" data-bundleid="0">
+			<p>Canada</p>
+			<img class="arrowIcon" src="icons/down-arrow.png"/>
+		</a>
+		<div class="subButtonContainer">
+			<div class="bundle-container subMenu-button jsSubMenuButton">
+			<a href="#" class="bundle-button" id="bundle-button0" data-bundleid="0">
+				<p>Trace</p>
+				<img class="arrowIcon" src="icons/down-arrow.png"/>
+			</a>
+			<!--
+			<div class="tableContainer">
+				<table>
+					<tbody>
+						<tr>
+							<td>ALBERTA</td>
+							<td>CALGARY</td>
+							<td>AIM MEDICAL EQUIPMENT</td>
+							<td>AIMMEDICAL.COM</td>
+						</tr>
+						<tr class=></tr>
+						<tr>
+							<td>ALBERTA</td>
+							<td>LLOYDMINSTER</td>
+							<td>MI - MOTION CANADA</td>
+							<td>MOTIONCANADA.CA</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			-->
+				<div class="rowContainer">
+					<div class="rowContent">
+						<p>ALBERTA</p>
+						<p>CALGARY</p>
+						<p>AIM MEDICAL EQUIPMENT</p>
+						<p>AIMMEDICAL.COM</p>
+					</div>
+					<div class="rowContent">
+						<p>ALBERTA</p>
+						<p>LLOYDMINSTER</p>
+						<p>MI - MOTION CANADA</p>
+						<p>MOTIONCANADA.CA</p>
+					</div>
+				</div>
+			</div>
 
+			<div class="bundle-container subMenu-button jsSubMenuButton">
+				<a href="#" class="bundle-button" id="bundle-button0" data-bundleid="1">
+					<p>Medical Devices</p>
+					<img class="arrowIcon" src="icons/down-arrow.png"/>
+				</a>
+				<div class="rowContainer">
+					<div class="rowContent">
+						<p>ALBERTA</p>
+						<p>CALGARY</p>
+						<p>AIM MEDICAL EQUIPMENT</p>
+						<p>AIMMEDICAL.COM</p>
+					</div>
+					<div class="rowContent">
+						<p>ALBERTA</p>
+						<p>LLOYDMINSTER</p>
+						<p>MI - MOTION CANADA</p>
+						<p>MOTIONCANADA.CA</p>
+					</div>
+				</div>
+			</div>
+			<div class="bundle-container subMenu-button jsSubMenuButton">
+			<a href="#" class="bundle-button" id="bundle-button0" data-bundleid="2">
+				<p>Ropes</p>
+				<img class="arrowIcon" src="icons/down-arrow.png"/>
+			</a>
+			</div>
+		</div>
+		<a href="#" class="bundle-button jsParentButton" id="bundle-button1" data-bundleid="1">
+			<p>United States</p>
+			<img class="arrowIcon" src="icons/down-arrow.png"/>
+		</a>
+		<div class="subButtonContainer">
+			<div class="bundle-container subMenu-button jsSubMenuButton">
+			<a href="#" class="bundle-button" id="bundle-button0" data-bundleid="3">
+				<p>Trace</p>
+				<img class="arrowIcon" src="icons/down-arrow.png"/>
+			</a>
+			</div>
+			<div class="bundle-container subMenu-button jsSubMenuButton">
+			<a href="#" class="bundle-button" id="bundle-button0" data-bundleid="4">
+				<p>Medical Devices</p>
+				<img class="arrowIcon" src="icons/down-arrow.png"/>
+			</a>
+			</div>
+			<div class="bundle-container subMenu-button jsSubMenuButton">
+			<a href="#" class="bundle-button" id="bundle-button0" data-bundleid="5">
+				<p>Ropes</p>
+				<img class="arrowIcon" src="icons/down-arrow.png"/>
+			</a>
+			</div>
+		</div>
+		<a href="#" class="bundle-button jsParentButton" id="bundle-button1" data-bundleid="2">
+			<p>Australia</p>
+			<img class="arrowIcon" src="icons/down-arrow.png"/>
+		</a>
+		<div class="subButtonContainer">
+			<div class="bundle-container subMenu-button jsSubMenuButton">
+			<a href="#" class="bundle-button" id="bundle-button0" data-bundleid="6">
+				<p>Trace</p>
+				<img class="arrowIcon" src="icons/down-arrow.png"/>
+			</a>
+			</div>
+			<div class="bundle-container subMenu-button jsSubMenuButton">
+			<a href="#" class="bundle-button" id="bundle-button0" data-bundleid="7">
+				<p>Medical Devices</p>
+				<img class="arrowIcon" src="icons/down-arrow.png"/>
+			</a>
+			</div>
+			<div class="bundle-container subMenu-button jsSubMenuButton">
+			<a href="#" class="bundle-button" id="bundle-button0" data-bundleid="8">
+				<p>Ropes</p>
+				<img class="arrowIcon" src="icons/down-arrow.png"/>
+			</a>
+			</div>
+		</div>
 	</div>
+	<script type="text/javascript" src="js/dropdown.js"></script>
+	<script type="text/javascript" src="js/dropdownApp.js"></script>
 </body>
 </html>
